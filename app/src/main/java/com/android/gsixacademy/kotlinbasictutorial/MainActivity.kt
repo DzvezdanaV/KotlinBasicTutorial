@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, className, Toast.LENGTH_LONG).show()
 
 
-          //  git test
-            // test test test
 
         }
     }
