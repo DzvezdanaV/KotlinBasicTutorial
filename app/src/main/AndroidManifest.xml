@@ -28,6 +28,7 @@
         <activity android:name=".CalculatorActivity"/>
 
         <activity android:name=".ToDoListActivity"/>
+        <activity android:name=".RecyclerViewAvtivity"/>
     </application>
 
 </manifest>
