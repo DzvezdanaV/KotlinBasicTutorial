@@ -11,7 +11,7 @@ import java.util.ArrayList
 class MainActivity : AppCompatActivity() {
 
 
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity", "CalculatorActivity", "ToDoListActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity", "CalculatorActivity", "ToDoListActivity", "RecyclerViewActivity")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
                 "RelativeLayoutActivity" -> startActivity(Intent(applicationContext, RelativeLayoutActivity::class.java))
                 "CalculatorActivity" -> startActivity(Intent(applicationContext, CalculatorActivity::class.java))
                 "ToDoListActivity" -> startActivity(Intent(applicationContext, ToDoListActivity::class.java))
+                "RecyclerViewActivity" -> startActivity(Intent(applicationContext, RecyclerViewAvtivity::class.java))
             }
 
             Toast.makeText(applicationContext, className, Toast.LENGTH_LONG).show()
