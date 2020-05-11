@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.android.gsixacademy.kotlinbasictutorial.movies.PopularMoviesActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
@@ -12,13 +13,14 @@ import java.util.ArrayList
 class MainActivity : AppCompatActivity() {
 
 
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity", "CalculatorActivity", "ToDoListActivity", "RecyclerViewActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity", "CalculatorActivity", "ToDoListActivity", "RecyclerViewActivity",
+        "LoginActivity", "UserSignedInActivity", "CarDetailsActivity", "PopularMoviesActivity" )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Picasso.get().load("https://i.pinimg.com/564x/f3/4d/1b/f34d1b622de7c23abbfc443fc4648243.jpg").into(image_view_background)
+        Picasso.get().load("https://pbs.twimg.com/profile_images/640983070166904832/30NhBuJC_400x400.jpg").into(image_view_background)
 
 
         var activitiesAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1,listActivities)
@@ -34,7 +36,12 @@ class MainActivity : AppCompatActivity() {
                 "RelativeLayoutActivity" -> startActivity(Intent(applicationContext, RelativeLayoutActivity::class.java))
                 "CalculatorActivity" -> startActivity(Intent(applicationContext, CalculatorActivity::class.java))
                 "ToDoListActivity" -> startActivity(Intent(applicationContext, ToDoListActivity::class.java))
-                "RecyclerViewActivity" -> startActivity(Intent(applicationContext, RecyclerViewAvtivity::class.java))
+                "RecyclerViewActivity" -> startActivity(Intent(applicationContext, RecyclerViewActivity::class.java))
+                "LoginActivity" -> startActivity(Intent(applicationContext, LoginActivity::class.java))
+                "UserSignedInActivity" -> startActivity(Intent(applicationContext, UserSignedInActivity::class.java))
+                "CarDetailsActivity" -> startActivity(Intent(applicationContext, CarDetailsActivity::class.java))
+                "PopularMoviesActivity" -> startActivity(Intent(applicationContext, PopularMoviesActivity::class.java))
+
             }
 
             Toast.makeText(applicationContext, className, Toast.LENGTH_LONG).show()
