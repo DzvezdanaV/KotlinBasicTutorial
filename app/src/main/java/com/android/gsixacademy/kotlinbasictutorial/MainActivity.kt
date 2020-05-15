@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.android.gsixacademy.kotlinbasictutorial.movies.PopularMoviesActivity
+import com.android.gsixacademy.kotlinbasictutorial.people.PopularPeopleActivity
+import com.android.gsixacademy.kotlinbasictutorial.search.SearchMoviesActivity
+import com.android.gsixacademy.kotlinbasictutorial.search.SearchPeopleActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
@@ -14,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
 
     var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity", "CalculatorActivity", "ToDoListActivity", "RecyclerViewActivity",
-        "LoginActivity", "UserSignedInActivity", "CarDetailsActivity", "PopularMoviesActivity" )
+        "LoginActivity", "UserSignedInActivity", "CarDetailsActivity", "PopularMoviesActivity", "PopularPeopleActivity", "SearchMoviesActivity", "SearchPeopleActivity" )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +44,9 @@ class MainActivity : AppCompatActivity() {
                 "UserSignedInActivity" -> startActivity(Intent(applicationContext, UserSignedInActivity::class.java))
                 "CarDetailsActivity" -> startActivity(Intent(applicationContext, CarDetailsActivity::class.java))
                 "PopularMoviesActivity" -> startActivity(Intent(applicationContext, PopularMoviesActivity::class.java))
+                "PopularPeopleActivity" -> startActivity(Intent(applicationContext, PopularPeopleActivity::class.java))
+                "SearchMoviesActivity" ->  startActivity(Intent(applicationContext, SearchMoviesActivity::class.java))
+                "SearchPeopleActivity" ->  startActivity(Intent(applicationContext, SearchPeopleActivity::class.java))
 
             }
 

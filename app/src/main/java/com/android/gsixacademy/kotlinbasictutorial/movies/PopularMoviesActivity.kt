@@ -1,13 +1,12 @@
 package com.android.gsixacademy.kotlinbasictutorial.movies
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.gsixacademy.kotlinbasictutorial.R
 import com.android.gsixacademy.kotlinbasictutorial.api.ServiceBuilder
 import com.android.gsixacademy.kotlinbasictutorial.api.TheMovieDbApi
 import com.android.gsixacademy.kotlinbasictutorial.models.PopularMovies
+import com.android.gsixacademy.kotlinbasictutorial.models.PopularPeople
 import kotlinx.android.synthetic.main.activity_movies.*
 import retrofit2.Call
 import retrofit2.Callback
